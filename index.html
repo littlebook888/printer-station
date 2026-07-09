@@ -904,11 +904,13 @@
         .qr-modal {
             background: white;
             border-radius: 16px;
-            padding: 20px;
+            padding: 24px;
             text-align: center;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             transform: scale(0.9);
             transition: transform 0.3s;
+            max-width: 90%;
+            box-sizing: border-box;
         }
 
         .qr-modal-overlay.show .qr-modal {
@@ -923,8 +925,6 @@
         }
 
         .qr-image {
-            width: 220px;
-            height: 220px;
             background: #f5f5f5;
             border-radius: 12px;
             margin: 0 auto 15px;
@@ -934,11 +934,13 @@
             font-size: 0.8rem;
             color: #999;
             border: 2px dashed #ddd;
+            padding: 8px;
+            max-width: 100%;
         }
 
         .qr-image img {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            max-height: 300px;
             object-fit: contain;
             border-radius: 12px;
         }
@@ -1011,7 +1013,7 @@
     <div class="page-body">
         <div class="container">
             <div class="header">
-                <h1>📄 小本子打印站 🖨</h1>
+                <h1>📄 <span style="color: #FFD700; text-shadow: 0 2px 4px rgba(255, 165, 0, 0.3);">小本子</span>打印站 🖨</h1>
                 <div class="version-tag">v1.7 2026/07/10 更新</div>
             </div>
 
@@ -1052,6 +1054,12 @@
                 </div>
                 <div style="text-align: center; margin-bottom: 25px; color: rgb(145, 43, 248);  margin-top: 0px">
                     理论服务范围：综合楼内
+                </div>
+
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <button onclick="showWechatQR()" style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #fff; border: none; padding: 12px 36px; font-size: 1.1rem; font-weight: bold; border-radius: 25px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4); transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px;">
+                        💬 立即联系
+                    </button>
                 </div>
 
                 <div id="pricing" class="section-title">收费标准 (非盈利·用于补充覆盖各类成本·防止滥用)</div>
