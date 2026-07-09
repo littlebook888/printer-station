@@ -756,13 +756,27 @@
             margin-bottom: 20px;
         }
 
-        .price-tier-card .section-title {
+        .price-tier-card .section-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: linear-gradient(135deg, #4A90E2, #67B26F);
-            color: white;
             margin: 0;
             padding: 15px 20px;
+            border-radius: 0;
+        }
+
+        .price-tier-card .section-title {
+            color: white;
+            margin: 0;
+            padding: 0;
             border-left: none;
             border-radius: 0;
+        }
+
+        .price-tier-card .section-date {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .price-tier-card .table-wrapper {
@@ -1013,7 +1027,8 @@
     <div class="page-body">
         <div class="container">
             <div class="header">
-                <h1>📄 <span style="color: #FFD700; text-shadow: 0 2px 4px rgba(255, 165, 0, 0.3);">小本子</span>打印站 🖨</h1>
+                <h1>📄 <span style="color: #FFD700; text-shadow: 0 2px 4px rgba(255, 165, 0, 0.3);">小本子</span>打印站 🖨
+                </h1>
                 <div class="version-tag">v1.7 2026/07/10 更新</div>
             </div>
 
@@ -1057,7 +1072,8 @@
                 </div>
 
                 <div style="text-align: center; margin-bottom: 25px;">
-                    <button onclick="showWechatQR()" style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #fff; border: none; padding: 12px 36px; font-size: 1.1rem; font-weight: bold; border-radius: 25px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4); transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px;">
+                    <button onclick="showWechatQR()"
+                        style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #fff; border: none; padding: 12px 36px; font-size: 1.1rem; font-weight: bold; border-radius: 25px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4); transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px;">
                         💬 立即联系
                     </button>
                 </div>
@@ -1068,7 +1084,10 @@
                 </p>
 
                 <div class="price-tier-card">
-                    <div class="section-title">📊 阶梯定价说明（鼓励集中打印）</div>
+                    <div class="section-title-row">
+                        <div class="section-title">📊 阶梯定价说明（鼓励集中打印）</div>
+                        <div class="section-date">2026.06.25后逐步过渡启用</div>
+                    </div>
                     <div class="table-wrapper">
                         <table class="price-tier-table">
                             <thead>
@@ -1184,7 +1203,8 @@
                             <br>声明：友情便民服务，不是在开店铺哦~~~~</strong>
                     </p>
                     <div id="contact" class="wechat-qr-box">
-                        <img src="HTML_1/微信二维码正方形模式设置 (2).png" alt="小本子微信二维码" class="wechat-qr" onclick="showWechatQR()" style="cursor: pointer;">
+                        <img src="HTML_1/微信二维码正方形模式设置 (2).png" alt="小本子微信二维码" class="wechat-qr" onclick="showWechatQR()"
+                            style="cursor: pointer;">
                         <div class="wechat-qr-caption">📱 打印主理人-小本子</div>
                     </div>
                 </div>
